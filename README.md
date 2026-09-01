@@ -2,6 +2,24 @@
 
 谷歌浏览器插件：划词翻译、全文中英对照，可自行接入 OpenAI 兼容大模型 API。
 
+宣传页：[docs/index.html](docs/index.html)（GitHub Pages 可将发布目录设为 `/docs`）
+
+## Docker 部署宣传页
+
+宣传页走子路径，不占根目录。访问地址：`http://你的IP/translate/`
+
+```bash
+docker compose up -d --build
+```
+
+容器只监听本机 `8080`。把 [docker/host-nginx.snippet.conf](docker/host-nginx.snippet.conf) 贴进现有 Nginx 的 `server { }`，然后：
+
+```bash
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+本地直接打开 `docs/index.html` 时，把 `<base href="/translate/" />` 改回 `/` 或删掉，否则样式会 404。
+
 ## 功能
 
 - 划词后弹出浮层，将选中文本翻译成中文

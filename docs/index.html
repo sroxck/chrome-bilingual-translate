@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>划词对照翻译 · Chrome 双语网页翻译插件</title>
+    <meta
+      name="description"
+      content="划词即译，全文中英对照。自行接入 OpenAI / DeepSeek / 通义兼容大模型 API 的 Chrome 扩展。"
+    />
+    <meta property="og:title" content="划词对照翻译" />
+    <meta
+      property="og:description"
+      content="在网页里选中英文立刻看到中文，也可以一键给整页加上双语对照。"
+    />
+    <base href="/translate/" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到主要内容</a>
+
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="#top" aria-label="划词对照翻译首页">
+          <span class="logo" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <circle cx="16" cy="16" r="16" fill="#2563EB" />
+              <path
+                d="M9.5 11.2h13M16 11.2v10.2M11.2 21.4h9.6"
+                stroke="#fff"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          划词对照翻译
+        </a>
+        <nav class="nav-links" aria-label="页面导航">
+          <a href="#features">功能</a>
+          <a href="#install">安装</a>
+          <a href="https://github.com/sroxck/chrome-bilingual-translate">GitHub</a>
+        </nav>
+        <a class="btn btn-cta" href="#install">免费安装</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" id="top">
+        <p class="eyebrow">Chrome 扩展 · 开源</p>
+        <h1>划词即译，原文对照。</h1>
+        <p class="lead">
+          在网页里选中英文，立刻看到中文。也可以一键给整页加上双语对照。API Key 留在你自己的浏览器里，模型由你选。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-cta" href="#install">开始使用</a>
+          <a class="btn btn-ghost" href="https://github.com/sroxck/chrome-bilingual-translate">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.92-.63.07-.62.07-.62 1 .07 1.53 1.04 1.53 1.04.9 1.54 2.36 1.1 2.94.84.09-.65.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-1.99 1.03-2.7-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03a9.56 9.56 0 0 1 5 0c1.9-1.3 2.74-1.03 2.74-1.03.55 1.37.2 2.39.1 2.64.64.71 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <div class="browser" aria-hidden="true">
+          <div class="browser-bar">
+            <span></span><span></span><span></span>
+            <div class="browser-url">example.com/article</div>
+          </div>
+          <div class="browser-body">
+            <h2 class="demo-h">Why bilingual reading helps</h2>
+            <p class="demo-en">
+              Immersive translation keeps the original English paragraph visible and places a Chinese rendering directly underneath.
+            </p>
+            <p class="demo-zh">沉浸式翻译会保留英文原文，并在段落正下方给出中文对照，方便核对术语。</p>
+            <p class="demo-en">Large language models can preserve proper nouns, code identifiers, and URLs when asked not to rewrite those tokens.</p>
+            <p class="demo-zh">只要提示词写清楚，大模型可以保留专有名词、代码标识符和 URL。</p>
+            <div class="float-card">
+              <div class="float-title">划词翻译</div>
+              <div class="float-src">repositories</div>
+              <div class="float-dst">代码仓库</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="features">
+        <h2>为读英文网页而做</h2>
+        <p class="section-lead">划词、整页对照、自己的模型，三件事就够用。不捆绑任何翻译服务商。</p>
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 7h16M9 7c0 8 6 8 6 0M8 17h8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>划词自动翻译</h3>
+            <p>选中单词或句子，松手即译。译文显示在选区旁的浮层里，不必再点一次按钮。</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 6h14M5 12h14M5 18h9" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>全文中英对照</h3>
+            <p>在原英文段落下方插入中文，阅读节奏不被打断。随时可以取消对照。</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="4" y="5" width="16" height="14" rx="2" />
+                <path d="M8 12h8M8 15h5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>自配大模型 API</h3>
+            <p>兼容 OpenAI、DeepSeek、通义兼容端或自建接口。Key 只存在本地，请求由后台脚本发出。</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 7h10l4 4v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" />
+                <path d="M15 7v4h4" />
+              </svg>
+            </div>
+            <h3>右键一键翻译</h3>
+            <p>菜单里可翻译选中文本、翻译整个页面，或清掉当前页的对照译文。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap" id="install">
+        <h2>三步开始用</h2>
+        <ol class="steps">
+          <li>
+            <strong>构建并加载</strong>
+            <p>克隆仓库后执行 <code>npm install && npm run build</code>，在 Chrome 扩展页加载 <code>dist</code> 目录。</p>
+          </li>
+          <li>
+            <strong>接入你的模型</strong>
+            <p>打开设置，填写 Base URL、API Key 和模型名，点「测试连接」。</p>
+          </li>
+          <li>
+            <strong>在网页里划词</strong>
+            <p>选中英文即出译文；需要整页对照时，用 Popup 或右键菜单一键翻译。</p>
+          </li>
+        </ol>
+        <div class="hero-actions">
+          <a class="btn btn-cta" href="https://github.com/sroxck/chrome-bilingual-translate">打开 GitHub 仓库</a>
+          <a class="btn btn-ghost" href="https://github.com/sroxck/chrome-bilingual-translate#readme">查看安装说明</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <p>划词对照翻译 · 开源 Chrome 扩展</p>
+        <a href="https://github.com/sroxck/chrome-bilingual-translate">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>
