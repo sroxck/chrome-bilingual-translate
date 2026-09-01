@@ -9,6 +9,20 @@
 - 在原英文段落下方插入中文，形成双语对照
 - 设置页填写 Base URL、API Key、Model（兼容 OpenAI / DeepSeek / 通义兼容端 / 自建）
 
+## 截图
+
+扩展程序
+
+![扩展程序](public/show/1.png)
+
+Popup
+
+![Popup](public/show/2.png)
+
+设置页
+
+![设置页](public/show/3.png)
+
 ## 开发 / 安装
 
 ```bash
