@@ -6,19 +6,17 @@
 
 ## Docker 部署宣传页
 
-宣传页走子路径，不占根目录。访问地址：`http://你的IP/translate/`
+宣传页走子路径，不占 80 端口。访问：`http://服务器IP:8080/translate/`
 
 ```bash
 docker compose up -d --build
 ```
 
-容器只监听本机 `8080`。把 [docker/host-nginx.snippet.conf](docker/host-nginx.snippet.conf) 贴进现有 Nginx 的 `server { }`，然后：
+安全组放行 **8080** 后，打开的是带端口和后缀的地址，不是 `http://IP:8080/`。
 
-```bash
-sudo nginx -t && sudo systemctl reload nginx
+```text
+http://8.141.13.235:8080/translate/
 ```
-
-本地直接打开 `docs/index.html` 时，把 `<base href="/translate/" />` 改回 `/` 或删掉，否则样式会 404。
 
 ## 功能
 
