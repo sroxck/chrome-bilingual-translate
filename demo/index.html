@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilingual Translate Demo</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 0 20px 80px;
+        line-height: 1.7;
+        color: #1c2333;
+      }
+      nav a {
+        margin-right: 12px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #dbe2ea;
+        padding: 8px 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#intro">Intro</a>
+      <a href="#more">More</a>
+    </nav>
+    <h1>Why bilingual reading helps</h1>
+    <p>
+      Immersive translation keeps the original English paragraph visible and places a Chinese
+      rendering directly underneath. This lets readers check terminology without leaving the page.
+    </p>
+    <p>
+      Large language models can preserve proper nouns, code identifiers, and URLs when the prompt
+      explicitly asks them not to rewrite those tokens.
+    </p>
+    <h2>A short list</h2>
+    <ul>
+      <li>Select a phrase to open the floating translator.</li>
+      <li>Use the right-click menu to translate the whole article.</li>
+      <li>Remove the bilingual overlay at any time.</li>
+    </ul>
+    <blockquote>
+      The goal is not to hide English, but to make English and Chinese readable together.
+    </blockquote>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Behavior</th>
+      </tr>
+      <tr>
+        <td>Selection popup</td>
+        <td>Appears near the highlighted text.</td>
+      </tr>
+    </table>
+    <p id="more">
+      Dynamic content should be observed as well. When new paragraphs appear after scrolling, they
+      can be translated in additional batches.
+    </p>
+  </body>
+</html>
